@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+ <meta charset="UTF-8" />
+ <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Currency converter example</title>
+</head>
+  
+<body class="bg-gradient-to-b from-cyan-800 to-slate-800 min-h-screen py-5">
+ <form id="currency_converter" class="mx-auto w-full max-w-sm bg-white shadow rounded-md p-5 space-y-3 text-sm">
+   <div class="flex items-center space-x-5">
+     <label for="base_currency_input">Amount:</label>
+     <input type="tel" id="base_currency_input" name="base_currency_input" placeholder="1" value=""
+       class="grow border-slate-300 border rounded-md py-2 px-4 text-sm" required />
+   </div>
+   <div class="flex items-center space-x-5">
+     <label for="currency">Currency:</label>
+     <select name="currency" id="currency"
+       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+       <option selected value="USD">USD</option>
+       <option value="CNY">CNY</option>
+       <option value="GBR">GBR</option>
+       <option value="EUR">EUR</option>
+       <option value="CHF">CHF</option>
+     </select>
+   </div>
+   <button type="submit" class="bg-slate-800 text-white rounded-md py-2 px-4 mx-auto relative block w-full">Convert
+   </button>
+ </form>
+ <div id="result"
+   class="mx-auto my-5 w-full max-w-sm bg-white shadow rounded-md relative overflow-hidden text-sm empty:hidden divide-y divide-dotted divide-slate-300">
+ </div>
+ <script type="module" src="/main.js"></script>
+</body>
+  
+</html>
